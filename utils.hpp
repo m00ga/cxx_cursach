@@ -4,19 +4,21 @@
 #include <vector>
 
 namespace ezlib {
-std::vector<std::string> splitString(const std::string &str, const char delim) {
-    std::vector<std::string> res;
-    std::string word;
-    for (std::string::const_iterator it = str.begin(); it != str.end(); it++) {
-        if (*it == delim) {
-            res.push_back(word);
-            word.clear();
-        } else {
-            word += *it;
-        }
-    }
-    return res;
-}
+// std::vector<std::string> splitString(const std::string &str, const char
+// delim) {
+//     std::vector<std::string> res;
+//     std::string word;
+//     for (std::string::const_iterator it = str.begin(); it != str.end(); it++)
+//     {
+//         if (*it == delim) {
+//             res.push_back(word);
+//             word.clear();
+//         } else {
+//             word += *it;
+//         }
+//     }
+//     return res;
+// }
 
 template <typename T> T from_string(const std::string &str);
 

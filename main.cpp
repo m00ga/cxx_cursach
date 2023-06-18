@@ -185,7 +185,7 @@ std::string makeStringTime(const std::time_t &t) {
     }
     std::time_t t_now = std::time(nullptr);
     std::time_t razn = t - t_now;
-    if (razn == 0) {
+    if (razn <= 0) {
         return "Expired";
     }
     int hours = razn / 3600;
